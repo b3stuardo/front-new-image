@@ -1,0 +1,12 @@
+<h3 class="text-center">Lista de productos</h3>
+
+<div class="productos-grid" *ngFor="let producto of productos">
+    <div class="box">
+        <!-- <img [src]="producto.img" alt="producto"> -->
+        <h3>{{ producto.nombre }}</h3>
+        <p><b>Descripción </b>{{ producto.descripcion }}</p>
+        <p><b>Código: </b>{{ producto.codigo }}</p>
+        <p><b>Existencias: </b>{{ producto.cantidad }}</p>
+        <p><b>Agregar: </b><button class="btn btn-secondary btn-sm" (click)="agregarAlCarrito(producto.codigo)">Agregar al carrito</button></p>
+    </div>
+</div>
