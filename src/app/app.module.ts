@@ -16,6 +16,9 @@ import { ListaHorarioComponent } from './lista-horario/lista-horario.component';
 import { GrabarServicioComponent } from './grabar-servicio/grabar-servicio.component';
 import { GrabarClienteComponent } from './grabar-cliente/grabar-cliente.component';
 import { GrabarCitaComponent } from './grabar-cita/grabar-cita.component';
+import { GrabarRecordatorioComponent } from './grabar-recordatorio/grabar-recordatorio.component';
+import { NgToastModule } from 'ng-angular-popup';
+
 
 @NgModule({
   declarations: [
@@ -29,13 +32,15 @@ import { GrabarCitaComponent } from './grabar-cita/grabar-cita.component';
     ListaHorarioComponent,
     GrabarServicioComponent,
     GrabarClienteComponent,
-    GrabarCitaComponent
+    GrabarCitaComponent,
+    GrabarRecordatorioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

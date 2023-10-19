@@ -1,0 +1,19 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Crear recordatorios de cita</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>ID Cita: </label>
+            <input type="number" name="cita" id="cita" class="form-control" [(ngModel)] = "recordatorio.idCita">
+        </div>
+        <div class="form-group">
+            <label>ID Estado: </label>
+            <input type="number" name="descripcion" id="descripcion" class="form-control" [(ngModel)] = "recordatorio.idEstado">
+        </div>
+        <div class="form-group">
+            <label>Intento: </label>
+            <input type="string" name="codigo" id="codigo" class="form-control" [(ngModel)] = "recordatorio.intento">
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+    </div>
+    

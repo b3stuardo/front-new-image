@@ -1,1 +1,23 @@
-<p>grabar-oferta works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Crear oferta</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Nombre: </label>
+            <input type="string" name="nombre" id="nombre" class="form-control" [(ngModel)] = "oferta.nombre">
+        </div>
+        <div class="form-group">
+            <label>Descuento: </label>
+            <input type="number" name="descuento" id="descuento" class="form-control" [(ngModel)] = "oferta.descuento">
+        </div>
+        <div class="form-group">
+            <label>Fecha inicio: </label>
+            <input type="date" name="fechaInicio" id="fechaInicio" class="form-control" [(ngModel)] = "oferta.fechaInicio">
+        </div>
+        <div class="form-group">
+            <label>fecha fin: </label>
+            <input type="date" name="fechaFin" id="fechaFin" class="form-control" [(ngModel)] = "oferta.fechaFin">
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+    </div>
+    
