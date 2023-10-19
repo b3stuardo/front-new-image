@@ -13,6 +13,9 @@ import { GrabarOfertaComponent } from './grabar-oferta/grabar-oferta.component';
 import { ListaOfertaComponent } from './lista-oferta/lista-oferta.component';
 import { GrabarHorarioComponent } from './grabar-horario/grabar-horario.component';
 import { ListaHorarioComponent } from './lista-horario/lista-horario.component';
+import { GrabarServicioComponent } from './grabar-servicio/grabar-servicio.component';
+import { GrabarClienteComponent } from './grabar-cliente/grabar-cliente.component';
+import { GrabarCitaComponent } from './grabar-cita/grabar-cita.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ListaHorarioComponent } from './lista-horario/lista-horario.component';
     GrabarOfertaComponent,
     ListaOfertaComponent,
     GrabarHorarioComponent,
-    ListaHorarioComponent
+    ListaHorarioComponent,
+    GrabarServicioComponent,
+    GrabarClienteComponent,
+    GrabarCitaComponent
   ],
   imports: [
     BrowserModule,

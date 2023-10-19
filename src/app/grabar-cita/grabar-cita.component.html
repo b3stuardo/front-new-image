@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Crear o producto</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Horario</label>
+            <select class="form-select" name="horatio" id="horario" [(ngModel)] = "cita.idHorario">
+                <option [ngValue]=0 selected>Seleccione un tipo de producto</option>
+                <option *ngFor="let horario of horarios" [ngValue]="horario.idHorario" >{{horario.horaInicio}} - {{horario.horaFin}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Precio: </label>
+            <input type="number" name="precio" id="precio" class="form-control" [(ngModel)] = "cita.precio">
+        </div>
+        <div class="form-group">
+            <label>Código de cliente: </label>
+            <input type="number" name="cliente" id="cliente" class="form-control" [(ngModel)] = "cita.idCliente">
+        </div>
+        <div class="form-group">
+            <label>Código de empleado: </label>
+            <input type="number" name="empleado" id="empleado" class="form-control" [(ngModel)] = "cita.idEmpleado">
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+    </div>
+    
