@@ -1,30 +1,42 @@
 <div class="col-md-6 offset-md-3">
-    <h3 class="text-center">Crear producto</h3>
+    <h3 class="text-center">CREAR PRODUCTO</h3>
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label>Nombre: </label>
             <input type="string" name="nombre" id="nombre" class="form-control" [(ngModel)] = "producto.nombre">
         </div>
+        <br>
+
         <div class="form-group">
             <label>Descripción: </label>
             <input type="string" name="descripcion" id="descripcion" class="form-control" [(ngModel)] = "producto.descripcion">
         </div>
+        <br>
+
         <div class="form-group">
             <label>Código: </label>
             <input type="string" name="codigo" id="codigo" class="form-control" [(ngModel)] = "producto.codigo">
         </div>
+        <br>
+
         <div class="form-group">
             <label>Precio: </label>
             <input type="number" name="precio" id="precio" class="form-control" [(ngModel)] = "producto.precio">
         </div>
+        <br>
+
         <div class="form-group">
             <label>Cantidad: </label>
             <input type="text" name="cantidad" id="cantidad" class="form-control" [(ngModel)] = "producto.cantidad">
         </div>
+        <br>
+
         <div class="form-group">
             <label>Tipo de producto: </label>
             <input type="number" name="tipoProducto" id="tipoProducto" class="form-control" [(ngModel)] = "producto.idTipoProducto">
         </div>
+        <br>
+
         <div class="form-group">
             <label>Tipo de producto</label>
             <select class="form-select" name="tipoProducto" id="tipoProducto" [(ngModel)] = "producto.idTipoProducto">
@@ -32,6 +44,9 @@
                 <option *ngFor="let tipoProducto of tiposProducto" [ngValue]="tipoProducto.idTipoProducto" >{{tipoProducto.descripcion}}</option>
             </select>
         </div>
+        
+        <br>
+        <br>
         <button type="submit" class="btn btn-success">Guardar</button>
     </form>
     </div>
