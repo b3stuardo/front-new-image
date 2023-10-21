@@ -1,0 +1,16 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Crear empleado</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Usuario</label>
+            <select class="form-select" name="usuario" id="usuario" [(ngModel)] = "usuario.idUsuario">
+                <option [ngValue]=0 selected>Seleccione un usuario</option>
+                <option *ngFor="let usuario of usuarios" [ngValue]="usuario.idUsuario" >{{usuario.nombre}} {{usuario.apellido}}</option>
+            </select>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+    </div>
+    

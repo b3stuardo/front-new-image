@@ -1,0 +1,10 @@
+<h3 class="text-center">Lista de empleados</h3>
+
+<div class="productos-grid" *ngFor="let empleado of empleados">
+    <div class="box">
+        <!-- <img [src]="producto.img" alt="producto"> -->
+        <h3><b>Nombre: </b>{{ empleado.usuario.nombre }} {{ empleado.usuario.apellido }}</h3>
+        <p><b>Email: </b>{{ empleado.usuario.email }}</p>
+        <p><b>Teléfono: </b>{{ empleado.usuario.telefono }}</p>
+    </div>
+</div>
