@@ -21,6 +21,9 @@ import { NgToastModule } from 'ng-angular-popup';
 import { GrabarFacturaComponent } from './grabar-factura/grabar-factura.component';
 import { ListaFacturasComponent } from './lista-facturas/lista-facturas.component';
 import { GrabarPagoComponent } from './grabar-pago/grabar-pago.component';
+import { GrabarEmpleadoComponent } from './grabar-empleado/grabar-empleado.component';
+import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
+import { GrabarUsuarioComponent } from './grabar-usuario/grabar-usuario.component';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import { GrabarPagoComponent } from './grabar-pago/grabar-pago.component';
     GrabarRecordatorioComponent,
     GrabarFacturaComponent,
     ListaFacturasComponent,
-    GrabarPagoComponent
+    GrabarPagoComponent,
+    GrabarEmpleadoComponent,
+    ListaEmpleadosComponent,
+    GrabarUsuarioComponent
   ],
   imports: [
     BrowserModule,

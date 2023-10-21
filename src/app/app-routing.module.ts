@@ -11,6 +11,9 @@ import { GrabarFacturaComponent } from './grabar-factura/grabar-factura.componen
 import { ListaFacturasComponent } from './lista-facturas/lista-facturas.component';
 import { GrabarPagoComponent } from './grabar-pago/grabar-pago.component';
 import { GrabarServicioComponent } from './grabar-servicio/grabar-servicio.component';
+import { GrabarEmpleadoComponent } from './grabar-empleado/grabar-empleado.component';
+import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
+import { GrabarUsuarioComponent } from './grabar-usuario/grabar-usuario.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/productos', pathMatch: 'full'},
@@ -24,7 +27,10 @@ const routes: Routes = [
   {path: 'grabar-factura', component: GrabarFacturaComponent},
   {path: 'facturas', component: ListaFacturasComponent},
   {path: 'grabar-pago', component: GrabarPagoComponent},
-  {path: 'grabar-servicio', component: GrabarServicioComponent}
+  {path: 'grabar-servicio', component: GrabarServicioComponent},
+  {path: 'grabar-empleado', component: GrabarEmpleadoComponent},
+  {path: 'empleados', component: ListaEmpleadosComponent},
+  {path: 'grabar-usuario', component: GrabarUsuarioComponent}
 ];
 
 @NgModule({

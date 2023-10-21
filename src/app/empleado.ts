@@ -1,10 +1,8 @@
 import { Usuario } from "./usuario";
 
-export class Cliente {
-    idCliente: number;
+export class Empleado {
     idDireccion: number;
     idUsuario: number;
     usuario: Usuario;
-    nit: string;
-    dpi: string;
+
 }
