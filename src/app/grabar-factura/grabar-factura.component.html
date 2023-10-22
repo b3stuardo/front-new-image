@@ -1,0 +1,27 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Facturar</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Número de serie: </label>
+            <input type="string" name="serie" id="serie" class="form-control" [(ngModel)] = "factura.noSerie">
+        </div>
+        <div class="form-group">
+            <label>Fecha: </label>
+            <input type="datetime-local" name="fecha" id="fecha" class="form-control" [(ngModel)] = "factura.fecha">
+        </div>
+        <div class="form-group">
+            <label>Pago: </label>
+            <input type="number" name="pago" id="pago" class="form-control" [(ngModel)] = "factura.idPago">
+        </div>
+        <div class="form-group">
+            <label>Oferta: </label>
+            <input type="number" name="oferta" id="oferta" class="form-control" [(ngModel)] = "factura.idOferta">
+        </div>
+        <div class="form-group">
+            <label>Total a cobrar: </label>
+            <input type="number" name="totalCobrar" id="totalCobrar" class="form-control" [(ngModel)] = "factura.totalCobrar">
+        </div><br>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+    </div>
+    

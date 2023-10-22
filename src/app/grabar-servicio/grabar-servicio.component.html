@@ -1,1 +1,33 @@
-<p>grabar-servicio works!</p>
+
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Grabar pago</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>id cita: </label>
+            <input type="number" name="cita" id="cita" class="form-control" [(ngModel)] = "servicio.idCita">
+        </div>
+        <div class="form-group">
+            <label>id producto: </label>
+            <input type="number" name="producto" id="producto" class="form-control" [(ngModel)] = "servicio.idProducto">
+        </div>
+        <div class="form-group">
+            <label>id oferta: </label>
+            <input type="number" name="oferta" id="oferta" class="form-control" [(ngModel)] = "servicio.idOferta">
+        </div>
+        <div class="form-group">
+            <label>Nombre: </label>
+            <input type="string" name="nombre" id="nombre" class="form-control" [(ngModel)] = "servicio.nombre">
+        </div>
+        <div class="form-group">
+            <label>Descripción: </label>
+            <input type="string" name="descripcion" id="descripcion" class="form-control" [(ngModel)] = "servicio.descripcion">
+        </div>
+        <div class="form-group">
+            <label>Tiempo estimado: </label>
+            <input type="time" name="tiempo" id="tiempo" class="form-control" [(ngModel)] = "servicio.tiempoEstimado">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+    </div>
+    
