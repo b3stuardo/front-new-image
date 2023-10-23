@@ -1,0 +1,26 @@
+<h2>Carrito de compras</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let producto of productosDelCarrito">
+            <td>{{producto.nombre}}</td>
+            <td><input type="number" [(ngModel)]="producto.cantidad"/></td>
+            <td>{{producto.precio}}</td>
+            <th>{{producto.precio * producto.cantidad}}</th>
+            <th>
+                <!-- <button (click)="editarPoliza(poliza.polizaID)">Editar</button> -->
+            </th>
+        </tr>
+    </tbody>
+    <br>
+    <button class="btn btn-primary" (click)="pagar()">Pagar</button>
+</table>

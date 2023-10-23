@@ -10,6 +10,7 @@ import { ProductoService } from '../producto.service';
 export class ListaProductosComponent{
 
   productos: Producto[];
+  productosDelCarrito: Producto[] = [];
 
   constructor(private productoService: ProductoService){
 
@@ -21,7 +22,11 @@ export class ListaProductosComponent{
     });
   }
 
-  agregarAlCarrito(codigo: string){
-  console.log('Agregar al carrito...');
+  agregarAlCarrito(producto: Producto){
+    let productoClone = { ...producto };
+    productoClone.cantidad = 1;
+    this.productosDelCarrito.push(productoClone);
+    console.log('Agregar al carrito...', this.productosDelCarrito);
+    localStorage.setItem('carrito', JSON.stringify(this.productosDelCarrito));
   }
 }

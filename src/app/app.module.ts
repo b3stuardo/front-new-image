@@ -24,6 +24,8 @@ import { GrabarPagoComponent } from './grabar-pago/grabar-pago.component';
 import { GrabarEmpleadoComponent } from './grabar-empleado/grabar-empleado.component';
 import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
 import { GrabarUsuarioComponent } from './grabar-usuario/grabar-usuario.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { ListaCarritoComponent } from './lista-carrito/lista-carrito.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { GrabarUsuarioComponent } from './grabar-usuario/grabar-usuario.componen
     GrabarPagoComponent,
     GrabarEmpleadoComponent,
     ListaEmpleadosComponent,
-    GrabarUsuarioComponent
+    GrabarUsuarioComponent,
+    CarritoComponent,
+    ListaCarritoComponent
   ],
   imports: [
     BrowserModule,
