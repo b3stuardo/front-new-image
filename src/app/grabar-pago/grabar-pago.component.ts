@@ -41,15 +41,16 @@ export class GrabarPagoComponent {
     console.log('Grabando pago...', this.pago);
     this.pagoServicio.grabarNuevoPago(this.pago).subscribe((dato) => {
       console.log(dato);
+      localStorage.setItem('pago', JSON.stringify(this.pago));
+      this.irAListaDeProductos();
       this.irAListaDeProductos();
     }, error => {
       console.log(error);
-      this.irAListaDeProductos();
     });
   }
 
   irAListaDeProductos(){
-    this.router.navigate(['/facturas']);
+    this.router.navigate(['/grabar-factura']);
   }
 
   onSubmit(){
