@@ -14,6 +14,7 @@ import { GrabarServicioComponent } from './grabar-servicio/grabar-servicio.compo
 import { GrabarEmpleadoComponent } from './grabar-empleado/grabar-empleado.component';
 import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
 import { GrabarUsuarioComponent } from './grabar-usuario/grabar-usuario.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/productos', pathMatch: 'full'},
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path: 'grabar-servicio', component: GrabarServicioComponent},
   {path: 'grabar-empleado', component: GrabarEmpleadoComponent},
   {path: 'empleados', component: ListaEmpleadosComponent},
-  {path: 'grabar-usuario', component: GrabarUsuarioComponent}
+  {path: 'grabar-usuario', component: GrabarUsuarioComponent},
+  {path: 'carrito', component: CarritoComponent}
 ];
 
 @NgModule({
