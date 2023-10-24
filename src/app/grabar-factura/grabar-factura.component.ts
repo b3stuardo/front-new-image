@@ -4,6 +4,7 @@ import { FacturaService } from '../factura.service';
 import { Router } from '@angular/router';
 import { Producto } from '../producto';
 import { Pago } from '../pago';
+import { PagoService } from '../pago.service';
 
 @Component({
   selector: 'app-grabar-factura',
@@ -16,8 +17,9 @@ export class GrabarFacturaComponent {
   facturas: Factura[];
   productosDelCarrito: Producto[];
   pago: Pago;
+  pagos: Pago[];
 
-  constructor(private facturaServicio: FacturaService, private router: Router){}
+  constructor(private facturaServicio: FacturaService, private pagoServicio: PagoService, private router: Router){}
 
   ngOnInit(){
     this.facturaServicio.obtenerListaDeFacturas().subscribe((response) => {
@@ -31,6 +33,7 @@ export class GrabarFacturaComponent {
       this.factura.idPago = this.pago.idPago;
       this.factura.totalCobrar = this.pago.montoTotal;
     });
+
 
   }
 
