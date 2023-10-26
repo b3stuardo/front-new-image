@@ -1,0 +1,17 @@
+<h2>Carrito de direcciones</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Zona</th>
+            <th>Departamento</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let direccion of direcciones">
+            <td>{{direccion.zona}}</td>
+            <td>{{direccion.departamento}}</td>
+        </tr>
+    </tbody>
+    <br>
+</table>

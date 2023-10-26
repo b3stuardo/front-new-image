@@ -1,10 +1,19 @@
-<h3 class="text-center">Lista de facturas emitidas</h3>
+<h2>Carrito de facturas</h2>
 
-<div class="productos-grid" *ngFor="let factura of facturas">
-    <div class="box">
-        <!-- <img [src]="producto.img" alt="producto"> -->
-        <h3><b>Serie: </b>{{ factura.noSerie }}</h3>
-        <p><b>Fecha: </b>{{ factura.fecha }}</p>
-        <p><b>Total: </b>{{ factura.totalCobrar }}</p>
-    </div>
-</div>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Serie</th>
+            <th>Fecha</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let factura of facturas">
+            <td>{{factura.noSerie}}</td>
+            <td>{{factura.fecha}}</td>
+            <td>{{factura.totalCobrar}}</td>
+        </tr>
+    </tbody>
+    <br>
+</table>

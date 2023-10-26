@@ -15,6 +15,13 @@ import { GrabarEmpleadoComponent } from './grabar-empleado/grabar-empleado.compo
 import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
 import { GrabarUsuarioComponent } from './grabar-usuario/grabar-usuario.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { GrabarDireccionComponent } from './grabar-direccion/grabar-direccion.component';
+import { ListaDireccionesComponent } from './lista-direcciones/lista-direcciones.component';
+import { ListaClientesComponent } from './lista-clientes/lista-clientes.component';
+import { GrabarHorarioComponent } from './grabar-horario/grabar-horario.component';
+import { ListaHorariosComponent } from './lista-horarios/lista-horarios.component';
+import { ListaOfertaComponent } from './lista-oferta/lista-oferta.component';
+import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/productos', pathMatch: 'full'},
@@ -22,9 +29,11 @@ const routes: Routes = [
   {path: 'productos/:id', component: DetalleProductoComponent},
   {path: 'grabar-producto', component: GrabarProductoComponent},
   {path: 'grabar-cliente', component: GrabarClienteComponent},
+  {path: 'clientes', component: ListaClientesComponent},
   {path: 'grabar-cita', component: GrabarCitaComponent},
   {path: 'grabar-recordatorio-cita', component: GrabarRecordatorioComponent},
   {path: 'grabar-oferta', component: GrabarOfertaComponent},
+  {path: 'ofertas', component: ListaOfertaComponent},
   {path: 'grabar-factura', component: GrabarFacturaComponent},
   {path: 'facturas', component: ListaFacturasComponent},
   {path: 'grabar-pago', component: GrabarPagoComponent},
@@ -32,7 +41,13 @@ const routes: Routes = [
   {path: 'grabar-empleado', component: GrabarEmpleadoComponent},
   {path: 'empleados', component: ListaEmpleadosComponent},
   {path: 'grabar-usuario', component: GrabarUsuarioComponent},
-  {path: 'carrito', component: CarritoComponent}
+  {path: 'carrito', component: CarritoComponent},
+  {path: 'grabar-direccion', component: GrabarDireccionComponent},
+  {path: 'direcciones', component: ListaDireccionesComponent},
+  {path: 'grabar-horario', component: GrabarHorarioComponent},
+  {path: 'horarios', component: ListaHorariosComponent},
+  {path: 'grabar-recordatorio', component: GrabarRecordatorioComponent},
+  {path: 'servicios', component: ListaServiciosComponent}
 ];
 
 @NgModule({

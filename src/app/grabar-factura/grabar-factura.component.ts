@@ -4,6 +4,9 @@ import { FacturaService } from '../factura.service';
 import { Router } from '@angular/router';
 import { Producto } from '../producto';
 import { Pago } from '../pago';
+import { PagoService } from '../pago.service';
+import { OfertaService } from '../oferta.service';
+import { Oferta } from '../oferta';
 
 @Component({
   selector: 'app-grabar-factura',
@@ -16,8 +19,12 @@ export class GrabarFacturaComponent {
   facturas: Factura[];
   productosDelCarrito: Producto[];
   pago: Pago;
+  pagos: Pago[];
+  ofertas: Oferta[];
+  ofertaSeleccionada: Oferta = new Oferta();
+  pagoSeleccionado: Pago = new Pago();
 
-  constructor(private facturaServicio: FacturaService, private router: Router){}
+  constructor(private facturaServicio: FacturaService, private pagoServicio: PagoService, private ofertaServicio: OfertaService,private router: Router){}
 
   ngOnInit(){
     this.facturaServicio.obtenerListaDeFacturas().subscribe((response) => {
@@ -32,6 +39,11 @@ export class GrabarFacturaComponent {
       this.factura.totalCobrar = this.pago.montoTotal;
     });
 
+
+    this.ofertaServicio.obtenerListaDeOfertas().subscribe((response) => {
+      this.ofertas = response;
+    });
+
   }
 
   guardarCliente(){
@@ -40,13 +52,22 @@ export class GrabarFacturaComponent {
       console.log(dato);
       localStorage.removeItem('carrito');
       localStorage.removeItem('pago');
+      window.alert('Factura grabada correctamente');
       this.irAListaDeProductos();
     }, error => {
       console.log(error);
       localStorage.removeItem('carrito');
       localStorage.removeItem('pago');
+      window.alert('Factura grabada correctamente');
       this.irAListaDeProductos();
     });
+  }
+
+  calcularTotal(){
+    const descto = this.ofertaSeleccionada.descuento;
+    const monto = this.pagoSeleccionado.montoTotal;
+    let total = monto - descto;
+    this.factura.totalCobrar = total;
   }
 
   irAListaDeProductos(){
