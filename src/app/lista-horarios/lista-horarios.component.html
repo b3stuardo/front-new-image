@@ -1,0 +1,20 @@
+<h2>Lista de horarios</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Fecha</th>
+            <th>Hora inicio</th>
+            <th>Hora fin</th>
+            
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let horario of horarios">
+            <td>{{horario.fecha}}</td>
+            <td>{{horario.horaInicio}}</td>
+            <td>{{horario.horaFin}}</td>
+        </tr>
+    </tbody>
+    <br>
+</table>

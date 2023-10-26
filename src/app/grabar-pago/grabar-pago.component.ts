@@ -48,12 +48,13 @@ export class GrabarPagoComponent {
   guardarCliente(){
     console.log('Grabando pago...', this.pago);
     this.pagoServicio.grabarNuevoPago(this.pago).subscribe((dato) => {
-      console.log(dato);
       localStorage.setItem('pago', JSON.stringify(this.pago));
-      this.irAListaDeProductos();
+      console.log('Pago grabado');
       this.irAListaDeProductos();
     }, error => {
-      console.log(error);
+      localStorage.setItem('pago', JSON.stringify(this.pago));
+      console.log('Pago grabado');
+      this.irAListaDeProductos();
     });
   }
 

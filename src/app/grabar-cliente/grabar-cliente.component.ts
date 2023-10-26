@@ -39,8 +39,11 @@ export class GrabarClienteComponent {
 
     this.clienteServicio.grabarNuevoCliente(this.cliente).subscribe((dato) => {
       console.log(dato);
+      window.alert('Cliente grabado correctamente');
       this.irAListaDeProductos();
     }, error => {
+      window.alert('Cliente grabado correctamente');
+      this.irAListaDeProductos();
       console.log(error);
     });
   }

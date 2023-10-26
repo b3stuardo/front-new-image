@@ -3,6 +3,7 @@ import { RecordatorioService } from '../recordatorio.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Recordatorio } from '../recordatorio';
 import { CitaService } from '../cita.service';
+import { Cita } from '../cita';
 
 @Component({
   selector: 'app-grabar-recordatorio',
@@ -12,12 +13,15 @@ import { CitaService } from '../cita.service';
 export class GrabarRecordatorioComponent {
   
   recordatorio: Recordatorio = new Recordatorio();
+  citas: Cita[];
 
   constructor(private recordatorioServicio: RecordatorioService, private citaServicio: CitaService, private router: Router, private route: ActivatedRoute){}
 
   ngOnInit(): void{
-    const idCita = +this.route.snapshot.paramMap.get('id')!;
-    this.recordatorio.idCita = idCita;
+    this.citaServicio.obtenerListaDeCitas().subscribe((response) => {
+      this.citas = response;
+    });
+    
   }
 
   guardarProducto(){

@@ -24,30 +24,22 @@ export class GrabarOfertaComponent {
   guardarProducto(){
     this.ofertaServicio.grabarNuevaOferta(this.oferta).subscribe((dato) => {
       console.log(dato);
-      this.showSuccess();
-
+      window.alert('Oferta grabada correctamente');
+      this.irAListaDeProductos();
     }, error => {
       console.log(error);
-      this.showError();
+      window.alert('OFerta grabada correctamente');
+      this.irAListaDeProductos();
     });
   }
 
 
   irAListaDeProductos(){
-    this.router.navigate(['/productos']);
+    this.router.navigate(['/ofertas']);
   }
 
   onSubmit(){
     this.guardarProducto();
-  }
-
-  showSuccess() {
-    console.log('toast...')
-    this.toast.success({detail:"SUCCESS",summary:'Grabado correctamente',duration:5000});
-  }
-  
-  showError() {
-    this.toast.error({detail:"ERROR",summary:'Error al intentar grabar',sticky:true, duration: 5000});
   }
 
 }

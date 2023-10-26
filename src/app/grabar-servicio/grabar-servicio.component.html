@@ -3,16 +3,25 @@
     <h3 class="text-center">Grabar servicio</h3>
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label>id cita: </label>
-            <input type="number" name="cita" id="cita" class="form-control" [(ngModel)] = "servicio.idCita">
+            <label>cita</label>
+            <select class="form-select" name="cita" id="cita" [(ngModel)] = "servicio.idCita">
+                <option [ngValue]=0 selected>Seleccione una cita</option>
+                <option *ngFor="let cita of citas" [ngValue]="cita.idCita" >{{cita.idCita}}</option>
+            </select>
         </div>
         <div class="form-group">
-            <label>id producto: </label>
-            <input type="number" name="producto" id="producto" class="form-control" [(ngModel)] = "servicio.idProducto">
+            <label>Producto</label>
+            <select class="form-select" name="producto" id="producto" [(ngModel)] = "servicio.idProducto">
+                <option [ngValue]=0 selected>Seleccione un producto</option>
+                <option *ngFor="let producto of productos" [ngValue]="producto.idProducto" >{{producto.nombre}}</option>
+            </select>
         </div>
         <div class="form-group">
-            <label>id oferta: </label>
-            <input type="number" name="oferta" id="oferta" class="form-control" [(ngModel)] = "servicio.idOferta">
+            <label>Oferta</label>
+            <select class="form-select" name="oferta" id="oferta" [(ngModel)] = "servicio.idOferta">
+                <option [ngValue]=0 selected>Seleccione una oferta</option>
+                <option *ngFor="let oferta of ofertas" [ngValue]="oferta.idOferta" >{{oferta.nombre}}</option>
+            </select>
         </div>
         <div class="form-group">
             <label>Nombre: </label>

@@ -26,6 +26,11 @@ import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.compo
 import { GrabarUsuarioComponent } from './grabar-usuario/grabar-usuario.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ListaCarritoComponent } from './lista-carrito/lista-carrito.component';
+import { GrabarDireccionComponent } from './grabar-direccion/grabar-direccion.component';
+import { ListaDireccionesComponent } from './lista-direcciones/lista-direcciones.component';
+import { ListaClientesComponent } from './lista-clientes/lista-clientes.component';
+import { ListaHorariosComponent } from './lista-horarios/lista-horarios.component';
+import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
 
 
 @NgModule({
@@ -49,7 +54,12 @@ import { ListaCarritoComponent } from './lista-carrito/lista-carrito.component';
     ListaEmpleadosComponent,
     GrabarUsuarioComponent,
     CarritoComponent,
-    ListaCarritoComponent
+    ListaCarritoComponent,
+    GrabarDireccionComponent,
+    ListaDireccionesComponent,
+    ListaClientesComponent,
+    ListaHorariosComponent,
+    ListaServiciosComponent
   ],
   imports: [
     BrowserModule,
