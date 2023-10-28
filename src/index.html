@@ -32,7 +32,7 @@
   <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
     
     <div class="container-fluid">
-      <a class="navbar-brand">Navbar</a>
+      <a class="navbar-brand" href="/">New Image</a>
       <form class="d-flex">
         <a class="form-control me-2 bg-light" href="carrito" >
           <img width="50" height="40" src="assets/img/shopping.png">
@@ -50,10 +50,10 @@
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Producto</a>
             <ul class="dropdown-menu">
                 <li>
-                  <a routerLink="productos" routerLinkActive="active" class="dropdown-item">Lista de productos</a>
+                  <a href="productos" class="dropdown-item">Lista de productos</a>
                 </li>
                 <li>
-                  <a routerLink="grabar-producto" routerLinkActive="active" class="dropdown-item">Crear producto</a>
+                  <a href="grabar-producto" class="dropdown-item">Crear producto</a>
                 </li>
             </ul>
           </li>
@@ -61,27 +61,24 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Horario</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="productos">Grabar</a></li>
-              <ul class="dropdown-menu">
-                <li><a routerLink="horarios" routerLinkActive="active" class="dropdown-item">Lista de horarios</a></li>
-                <li><a routerLink="grabar-horario" routerLinkActive="active" class="dropdown-item">Crear horario</a></li>
-            </ul>
+              <li><a href="horarios" class="dropdown-item">Lista de horarios</a></li>
+              <li><a href="grabar-horario" class="dropdown-item">Crear horario</a></li>
             </ul>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Oferta</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="grabar-producto">Lista Oferta</a></li>
-              <li><a class="dropdown-item" href="productos">Grabar</a></li>
+              <li><a class="dropdown-item" href="ofertas">Lista Oferta</a></li>
+              <li><a class="dropdown-item" href="grabar-oferta">Grabar</a></li>
             </ul>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="grabar-empleados">Empleado</a></li>
-              <li><a class="dropdown-item" href="empleados">Grabar Empleado</a></li>
+              <li><a class="dropdown-item" href="empleados">Empleado</a></li>
+              <li><a class="dropdown-item" href="grabar-empleado">Grabar Empleado</a></li>
             </ul>
 
           <li class="nav-item dropdown">
@@ -92,7 +89,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Rregistro de usuarios</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Registro de usuarios</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="grabar-usuario">Crear usuario</a></li>
               <li><a class="dropdown-item" href="grabar-cliente">Definir rol cliente</a></li>
