@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/eb49c2a9-c5e4-49f1-b6f7-435439a88559/resourceGroups/newimage/providers/Microsoft.Web/sites/newimagefront",
+    "appService.deploySubpath": "dist"
+}

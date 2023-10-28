@@ -2,9 +2,13 @@
     <h3 class="text-center">Crear recordatorios de cita</h3>
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label>ID Cita: </label>
-            <input type="number" name="cita" id="cita" class="form-control" [(ngModel)] = "recordatorio.idCita">
+            <label>cita</label>
+            <select class="form-select" name="cita" id="cita" [(ngModel)] = "recordatorio.idCita">
+                <option [ngValue]=0 selected>Seleccione una cita</option>
+                <option *ngFor="let cita of citas" [ngValue]="cita.idCita" >{{cita.idCita}}</option>
+            </select>
         </div>
+        
         <div class="form-group">
             <label>ID Estado: </label>
             <input type="number" name="descripcion" id="descripcion" class="form-control" [(ngModel)] = "recordatorio.idEstado">

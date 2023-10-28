@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Producto } from '../producto';
 import { Router } from '@angular/router';
+import { ServicioService } from '../servicio.service';
+import { Servicio } from '../servicio';
 
 @Component({
   selector: 'app-carrito',
@@ -9,8 +11,9 @@ import { Router } from '@angular/router';
 })
 export class CarritoComponent {
   productosDelCarrito: Producto[] = [];
+  servicios: Servicio[];
 
-  constructor (private router: Router){}
+  constructor (private servicioServicio: ServicioService, private router: Router){}
 
   ngOnInit(): void{
     let carritoStorage = localStorage.getItem('carrito') as string;
