@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class DireccionService {
 
-  private baseURL = 'http://localhost/api-NewImage/public/api/direccion';
+  private baseURL = 'http://4.157.65.162/api/direccion';
 
   constructor(private httpClient: HttpClient) { }
 

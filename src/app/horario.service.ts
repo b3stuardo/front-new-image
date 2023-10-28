@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class HorarioService {
 
-  private baseURL = 'http://localhost/api-NewImage/public/api/horario';
+  private baseURL = 'http://4.157.65.162/api/horario';
 
   constructor(private httpClient: HttpClient) { }
 
