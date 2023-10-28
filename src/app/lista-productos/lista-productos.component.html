@@ -16,9 +16,9 @@
   
 </head>  
 
-<h3 class="text-center">Lista de Productos</h3>
+<h3 class="text-center">Lista de productos</h3>
 
-<div class="productos-grid" *ngFor="let producto of productos">
+<div *ngFor="let producto of productos">
 
     <div class="box row">
         <!-- <img [src]="producto.img" alt="producto"> -->
@@ -30,6 +30,7 @@
             <p><b>Existencias: </b>{{ producto.cantidad }}</p>
             <p><b>Agregar: </b><button class="btn btn-secondary btn-sm" (click)="agregarAlCarrito(producto)">Agregar al carrito</button></p>
           </div><!-- /.col-lg-4 -->
+        
     </div>
 </div>
 
