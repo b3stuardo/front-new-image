@@ -40,8 +40,12 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Producto</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="productos">Lista Producto</a></li>
-              <li><a class="dropdown-item" href="grabar-producto">Grabar</a></li>
+                <li>
+                  <a routerLink="productos" routerLinkActive="active" class="dropdown-item">Lista de productos</a>
+                </li>
+                <li>
+                  <a routerLink="grabar-producto" routerLinkActive="active" class="dropdown-item">Crear producto</a>
+                </li>
             </ul>
           </li>
 
@@ -50,6 +54,10 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="grabar-producto">Lista Horario</a></li>
               <li><a class="dropdown-item" href="productos">Grabar</a></li>
+              <ul class="dropdown-menu">
+                <li><a routerLink="horarios" routerLinkActive="active" class="dropdown-item">Lista de horarios</a></li>
+                <li><a routerLink="grabar-horario" routerLinkActive="active" class="dropdown-item">Crear horario</a></li>
+            </ul>
             </ul>
           </li>
 

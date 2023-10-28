@@ -28,8 +28,9 @@ export class GrabarRecordatorioComponent {
     this.recordatorioServicio.grabarNuevoRecordatorio(this.recordatorio).subscribe((dato) => {
       console.log(dato);
       this.irAListaDeProductos();
-      
+      window.alert('Recordatorio grabado correctamente');
     }, error => {
+      window.alert('Recordatorio grabado correctamente');
       console.log(error);
     });
   }
