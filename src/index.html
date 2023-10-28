@@ -15,25 +15,34 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Navbar Template � Bootstrap v5.3</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars/">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 
   <main>
   <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
-  
-      <a class="navbar-brand" href="#">NEW IMAGE</a>
-      <a class="navbar-brand" href="carrito">Carrito</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    
+    <div class="container-fluid">
+      <a class="navbar-brand">Navbar</a>
+      <form class="d-flex">
+        <a class="form-control me-2 bg-light" href="carrito" >
+          <img width="50" height="40" src="assets/img/shopping.png">
+          </a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+      </form>
+    </div>
 
       <div class="collapse navbar-collapse" id="navbarsExample01">
         <ul class="navbar-nav me-auto mb-2">
@@ -52,7 +61,6 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Horario</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="grabar-producto">Lista Horario</a></li>
               <li><a class="dropdown-item" href="productos">Grabar</a></li>
               <ul class="dropdown-menu">
                 <li><a routerLink="horarios" routerLinkActive="active" class="dropdown-item">Lista de horarios</a></li>
@@ -70,11 +78,11 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Carrito de compras</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="carrito">Ver carrito de compras</a></li>
+              <li><a class="dropdown-item" href="grabar-empleados">Empleado</a></li>
+              <li><a class="dropdown-item" href="empleados">Grabar Empleado</a></li>
             </ul>
-          </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Citas</a>
@@ -93,16 +101,6 @@
           </li>
 
 
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-          
         </ul>
       </div>
     </div>
