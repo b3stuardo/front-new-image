@@ -1,0 +1,19 @@
+<h2>Carrito de direcciones</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Cliente</th>
+            <th>NIT</th>
+            <th>DPI</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let cliente of clientes">
+            <td>{{cliente.usuario.nombre}} {{cliente.usuario.apellido}}</td>
+            <td>{{cliente.nit}}</td>
+            <td>{{cliente.dpi}}</td>
+        </tr>
+    </tbody>
+    <br>
+</table>

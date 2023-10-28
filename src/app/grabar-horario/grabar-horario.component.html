@@ -1,1 +1,20 @@
-<p>grabar-horario works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Crear horario</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Hora inicio: </label>
+            <input type="time" name="horaInicio" id="horaInicio" class="form-control" [(ngModel)] = "horario.horaInicio">
+        </div>
+        <div class="form-group">
+            <label>Hora fin: </label>
+            <input type="time" name="horaFin" id="horaFin" class="form-control" [(ngModel)] = "horario.horaFin">
+        </div>
+        <div class="form-group">
+            <label>Fecha: </label>
+            <input type="date" name="fecha" id="fecha" class="form-control" [(ngModel)] = "horario.fecha">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+    </div>
+    

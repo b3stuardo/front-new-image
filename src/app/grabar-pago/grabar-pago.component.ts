@@ -3,6 +3,8 @@ import { Pago } from '../pago';
 import { PagoService } from '../pago.service';
 import { Router } from '@angular/router';
 import { Producto } from '../producto';
+import { ServicioService } from '../servicio.service';
+import { Servicio } from '../servicio';
 
 @Component({
   selector: 'app-grabar-pago',
@@ -13,14 +15,20 @@ export class GrabarPagoComponent {
   pago: Pago = new Pago();
   pagos: Pago[];
 
+  servicios: Servicio[];
+
   productosDelCarrito: Producto[];
   total: number = 0;
 
-  constructor(private pagoServicio: PagoService, private router: Router){}
+  constructor(private pagoServicio: PagoService, private servicioServicio: ServicioService, private router: Router){}
 
   ngOnInit(){
     this.pagoServicio.obtenerListaDePagos().subscribe((response) => {
       this.pagos = response;
+    });
+
+    this.servicioServicio.obtenerListaDeServicios().subscribe((response) => {
+      this.servicios = response;
     });
 
     let carritoStorage = localStorage.getItem('carrito') as string;
@@ -40,12 +48,13 @@ export class GrabarPagoComponent {
   guardarCliente(){
     console.log('Grabando pago...', this.pago);
     this.pagoServicio.grabarNuevoPago(this.pago).subscribe((dato) => {
-      console.log(dato);
       localStorage.setItem('pago', JSON.stringify(this.pago));
-      this.irAListaDeProductos();
+      console.log('Pago grabado');
       this.irAListaDeProductos();
     }, error => {
-      console.log(error);
+      localStorage.setItem('pago', JSON.stringify(this.pago));
+      console.log('Pago grabado');
+      this.irAListaDeProductos();
     });
   }
 

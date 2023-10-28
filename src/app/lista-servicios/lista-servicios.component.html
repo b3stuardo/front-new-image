@@ -1,0 +1,17 @@
+<h2>Lista de servicios</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Tiempo estimado</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let servicio of servicios">
+            <td>{{servicio.nombre}}</td>
+            <td>{{servicio.tiempoEstimado}}</td>
+        </tr>
+    </tbody>
+    <br>
+</table>

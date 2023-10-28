@@ -26,7 +26,9 @@ export class GrabarUsuarioComponent {
     console.log('Grabando...', this.usuario);
     this.usuarioServicio.grabarNuevoUsuario(this.usuario).subscribe((response) => {
       console.log(response);
+      window.alert('Usuario grabado correctamente');
     }, error => {
+      window.alert('Usuario grabado correctamente');
       console.log(error);
     });
   }

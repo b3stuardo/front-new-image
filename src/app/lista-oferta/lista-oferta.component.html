@@ -1,1 +1,21 @@
-<p>lista-oferta works!</p>
+<h2>Lista de horarios</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Descuento</th>
+            <th>Fecha inicio</th>
+            <th>Fecha fin</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let oferta of ofertas">
+            <td>{{oferta.nombre}}</td>
+            <td>{{oferta.descuento}}</td>
+            <td>{{oferta.fechaInicio}}</td>
+            <td>{{oferta.fechaFin}}</td>
+        </tr>
+    </tbody>
+    <br>
+</table>

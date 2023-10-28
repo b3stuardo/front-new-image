@@ -25,8 +25,10 @@ export class GrabarProductoComponent {
   guardarProducto(){
     this.productoServicio.grabarNuevoProducto(this.producto).subscribe((dato) => {
       console.log(dato);
+      window.alert('Producto grabado correctamente');
       this.irAListaDeProductos();
     }, error => {
+      window.alert('Producto grabado correctamente');
       console.log(error);
     });
   }

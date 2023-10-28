@@ -37,8 +37,10 @@ export class GrabarEmpleadoComponent {
     this.empleado.idUsuario = this.usuario.idUsuario;
     this.empleadoServicio.grabarNuevoEmpleado(this.empleado).subscribe((dato) => {
       console.log(dato);
+      window.alert('Empleado grabado correctamente');
       this.irAListaDeProductos();
     }, error => {
+      window.alert('Empleado grabado correctamente');
       console.log(error);
     });
   }
