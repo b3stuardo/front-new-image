@@ -9,7 +9,7 @@ import { EmpleadoDTO } from './empleado-dto';
 })
 export class EmpleadoService {
 
-  private baseURL = 'http://localhost/api-NewImage/public/api/empleado';
+  private baseURL = 'http://4.157.65.162/api/empleado';
 
   constructor(private httpClient: HttpClient) { }
 

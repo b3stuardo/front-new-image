@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductoService {
   
-  private baseURL = 'http://localhost/api-NewImage/public/api/producto';
+  private baseURL = 'http://4.157.65.162/api/producto';
 
   constructor(private httpClient: HttpClient) { }
 

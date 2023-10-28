@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class FacturaService {
 
-  private baseURL = 'http://localhost/api-NewImage/public/api/factura';
+  private baseURL = 'http://4.157.65.162/api/factura';
 
   constructor(private httpClient: HttpClient) { }
 

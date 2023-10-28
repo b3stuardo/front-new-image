@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CitaService {
-  private baseURL = 'http://localhost/api-NewImage/public/api/cita';
+  private baseURL = 'http://4.157.65.162/api/cita';
 
   constructor(private httpClient: HttpClient) { }
 

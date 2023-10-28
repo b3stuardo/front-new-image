@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PagoService {
   
-  private baseURL = 'http://localhost/api-NewImage/public/api/pago';
+  private baseURL = 'http://4.157.65.162/api/pago';
 
   constructor(private httpClient: HttpClient) { }
 

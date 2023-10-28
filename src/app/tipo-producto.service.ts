@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TipoProductoService {
 
-  private baseURL = 'http://localhost/api-NewImage/public/api/tipoproducto/index';
+  private baseURL = 'http://4.157.65.162/api/tipoproducto/index';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class OfertaService {
 
-  private baseURL = 'http://localhost/api-NewImage/public/api/oferta';
+  private baseURL = 'http://4.157.65.162/api/oferta';
 
   constructor(private httpClient: HttpClient) { }
 

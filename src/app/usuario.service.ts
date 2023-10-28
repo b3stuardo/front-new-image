@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private baseURL = 'http://localhost/api-NewImage/public/api/usuario';
+  private baseURL = 'http://4.157.65.162/api/usuario';
 
   constructor(private httpClient: HttpClient) { }
 

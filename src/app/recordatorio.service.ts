@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class RecordatorioService {
 
-  private baseURL = 'http://localhost/api-NewImage/public/api/recordatorio';
+  private baseURL = 'http://4.157.65.162/api/recordatorio';
 
   constructor(private httpClient: HttpClient) { }
 
